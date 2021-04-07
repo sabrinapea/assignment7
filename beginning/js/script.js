@@ -5,7 +5,6 @@ let employeeList = document.querySelector('#employees');
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
 let counter = 0;
 
-
 // ADD EMPLOYEE
 form.addEventListener('submit', (e) => {
     // PREVENT FORM SUBMISSION
@@ -29,13 +28,13 @@ form.addEventListener('submit', (e) => {
     let cellEmail = row.insertCell(3);
     let cellDepart = row.insertCell(4);
     let cellDelete = row.insertCell(5);
+
     // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
     cellId.appendChild(document.createTextNode(newId));
     cellName.appendChild(document.createTextNode(newName));
     cellExt.appendChild(document.createTextNode(newExt));
     cellEmail.appendChild(document.createTextNode(newEmail));
     cellDepart.appendChild(document.createTextNode(newDepart));
-
 
     // CREATE THE DELETE BUTTON
     let deleteBtn = document.createElement('button');
@@ -58,13 +57,6 @@ form.addEventListener('submit', (e) => {
     counter++;
     let numemployee = document.querySelector('#empCount');
     numemployee.value = counter;
-    // for (let i = 1; i <=10; i++) {
-    //     Option.text = 'Item' + i;
-    //     Option.value = i;
-    //     numemployee.addEventListener(option, 0);
-    // }
-    
-
 });
 
 // DELETE EMPLOYEE
