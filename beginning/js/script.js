@@ -62,7 +62,7 @@ form.addEventListener('submit', (e) => {
 // DELETE EMPLOYEE
 employeeList.addEventListener('click', (e) => {
     if (e.target.classList.contains('delete')) {
-        if (confirm('are you sure you want to delete this list')) {
+        if (confirm('Are you sure you want to delete this employee?')) {
             employeeList.deleteRow(e.target.parentElement.parentElement.rowIndex);
             
             counter--;
