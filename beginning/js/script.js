@@ -61,10 +61,11 @@ form.addEventListener('submit', (e) => {
 
 // DELETE EMPLOYEE
 employeeList.addEventListener('click', (e) => {
+    // confirm delete
     if (e.target.classList.contains('delete')) {
         if (confirm('Are you sure you want to delete this employee?')) {
             employeeList.deleteRow(e.target.parentElement.parentElement.rowIndex);
-            
+            //decrement the counter
             counter--;
             let numemployee = document.querySelector('#empCount');
             numemployee.value = counter;
